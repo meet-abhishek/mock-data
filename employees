@@ -1,0 +1,467 @@
+const employees = [
+  {
+    id: 1,
+    firstName: "John",
+    lastName: "Doe",
+    fullName: "John Doe",
+    position: "Project Manager",
+    department: "Management",
+    team: "Project Management",
+    salary: 75000,
+    employmentStatus: "Active",
+    hireDate: "2020-06-15",
+    email: "johndoe@company.com",
+    phoneNumber: "+1234567890",
+    address: {
+      street: "123 Elm St",
+      city: "New York",
+      state: "NY",
+      zipCode: "10001"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 4,
+      lastReviewDate: "2023-12-15",
+      feedback: "Excellent leadership skills, needs improvement in time management."
+    },
+    emergencyContact: {
+      name: "Jane Doe",
+      relationship: "Spouse",
+      phoneNumber: "+0987654321"
+    },
+    payroll: {
+      baseSalary: 75000,
+      bonuses: 5000,
+      deductions: 2000,
+      netSalary: 78000
+    },
+    benefits: [
+      "Health Insurance",
+      "401K",
+      "Paid Time Off"
+    ],
+    rolePermissions: [
+      "View Reports",
+      "Approve Budgets",
+      "Manage Team"
+    ]
+  },
+  {
+    id: 2,
+    firstName: "Jane",
+    lastName: "Smith",
+    fullName: "Jane Smith",
+    position: "Software Engineer",
+    department: "IT",
+    team: "Development",
+    salary: 65000,
+    employmentStatus: "Active",
+    hireDate: "2019-09-22",
+    email: "janesmith@company.com",
+    phoneNumber: "+1987654321",
+    address: {
+      street: "456 Oak Ave",
+      city: "San Francisco",
+      state: "CA",
+      zipCode: "94101"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 3,
+      lastReviewDate: "2023-11-30",
+      feedback: "Strong technical skills, improvement needed in collaboration."
+    },
+    emergencyContact: {
+      name: "Alex Smith",
+      relationship: "Brother",
+      phoneNumber: "+1122334455"
+    },
+    payroll: {
+      baseSalary: 65000,
+      bonuses: 3000,
+      deductions: 1500,
+      netSalary: 68000
+    },
+    benefits: [
+      "Health Insurance",
+      "Stock Options"
+    ],
+    rolePermissions: [
+      "Write Code",
+      "Submit Bug Reports",
+      "Participate in Code Reviews"
+    ]
+  },
+  {
+    id: 3,
+    firstName: "Alex",
+    lastName: "Brown",
+    fullName: "Alex Brown",
+    position: "Marketing Specialist",
+    department: "Marketing",
+    team: "Campaigns",
+    salary: 55000,
+    employmentStatus: "Active",
+    hireDate: "2021-01-10",
+    email: "alexbrown@company.com",
+    phoneNumber: "+1765432109",
+    address: {
+      street: "789 Pine Rd",
+      city: "Chicago",
+      state: "IL",
+      zipCode: "60601"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 4,
+      lastReviewDate: "2023-10-01",
+      feedback: "Creative thinker, needs to work on deadlines."
+    },
+    emergencyContact: {
+      name: "Maria Brown",
+      relationship: "Mother",
+      phoneNumber: "+1098765432"
+    },
+    payroll: {
+      baseSalary: 55000,
+      bonuses: 2000,
+      deductions: 1000,
+      netSalary: 57000
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off"
+    ],
+    rolePermissions: [
+      "Create Campaigns",
+      "Track Analytics",
+      "Client Interaction"
+    ]
+  },
+  {
+    id: 4,
+    firstName: "Sara",
+    lastName: "White",
+    fullName: "Sara White",
+    position: "HR Coordinator",
+    department: "Human Resources",
+    team: "Recruitment",
+    salary: 48000,
+    employmentStatus: "Active",
+    hireDate: "2022-05-20",
+    email: "sarawhite@company.com",
+    phoneNumber: "+1908765432",
+    address: {
+      street: "102 Maple St",
+      city: "Los Angeles",
+      state: "CA",
+      zipCode: "90001"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 3,
+      lastReviewDate: "2023-09-15",
+      feedback: "Needs to improve organizational skills."
+    },
+    emergencyContact: {
+      name: "David White",
+      relationship: "Father",
+      phoneNumber: "+1230987654"
+    },
+    payroll: {
+      baseSalary: 48000,
+      bonuses: 1000,
+      deductions: 500,
+      netSalary: 49000
+    },
+    benefits: [
+      "Health Insurance",
+      "Retirement Plan"
+    ],
+    rolePermissions: [
+      "Interview Candidates",
+      "Manage Employee Records"
+    ]
+  },
+  {
+    id: 5,
+    firstName: "Michael",
+    lastName: "Green",
+    fullName: "Michael Green",
+    position: "Data Analyst",
+    department: "Data Science",
+    team: "Analytics",
+    salary: 62000,
+    employmentStatus: "Active",
+    hireDate: "2018-07-10",
+    email: "michaelgreen@company.com",
+    phoneNumber: "+1234567891",
+    address: {
+      street: "101 Cedar Blvd",
+      city: "Austin",
+      state: "TX",
+      zipCode: "73301"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 5,
+      lastReviewDate: "2023-08-20",
+      feedback: "Exceptional skills in data visualization and analysis."
+    },
+    emergencyContact: {
+      name: "Emma Green",
+      relationship: "Sister",
+      phoneNumber: "+1234324321"
+    },
+    payroll: {
+      baseSalary: 62000,
+      bonuses: 4000,
+      deductions: 1500,
+      netSalary: 63500
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off",
+      "Gym Membership"
+    ],
+    rolePermissions: [
+      "Analyze Data",
+      "Create Reports",
+      "Present Findings"
+    ]
+  },
+  {
+    id: 6,
+    firstName: "Emma",
+    lastName: "Taylor",
+    fullName: "Emma Taylor",
+    position: "Sales Manager",
+    department: "Sales",
+    team: "North Region",
+    salary: 72000,
+    employmentStatus: "Active",
+    hireDate: "2020-11-05",
+    email: "emmataylor@company.com",
+    phoneNumber: "+1456789012",
+    address: {
+      street: "305 Birch St",
+      city: "Denver",
+      state: "CO",
+      zipCode: "80202"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 4,
+      lastReviewDate: "2023-12-05",
+      feedback: "Strong leadership skills, needs to focus on closing deals."
+    },
+    emergencyContact: {
+      name: "John Taylor",
+      relationship: "Husband",
+      phoneNumber: "+1567890123"
+    },
+    payroll: {
+      baseSalary: 72000,
+      bonuses: 7000,
+      deductions: 2500,
+      netSalary: 74500
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off",
+      "Company Car"
+    ],
+    rolePermissions: [
+      "Oversee Sales",
+      "Manage Team",
+      "Negotiate Contracts"
+    ]
+  },
+  {
+    id: 7,
+    firstName: "David",
+    lastName: "Johnson",
+    fullName: "David Johnson",
+    position: "Operations Manager",
+    department: "Operations",
+    team: "Logistics",
+    salary: 68000,
+    employmentStatus: "Active",
+    hireDate: "2017-03-12",
+    email: "davidjohnson@company.com",
+    phoneNumber: "+1345678901",
+    address: {
+      street: "455 Maple Ave",
+      city: "Boston",
+      state: "MA",
+      zipCode: "02101"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 4,
+      lastReviewDate: "2023-08-15",
+      feedback: "Efficient and organized, but could be more flexible with team input."
+    },
+    emergencyContact: {
+      name: "Linda Johnson",
+      relationship: "Mother",
+      phoneNumber: "+1678901234"
+    },
+    payroll: {
+      baseSalary: 68000,
+      bonuses: 3000,
+      deductions: 1000,
+      netSalary: 71000
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off",
+      "Stock Options"
+    ],
+    rolePermissions: [
+      "Manage Logistics",
+      "Monitor Operations",
+      "Oversee Team"
+    ]
+  },
+  {
+    id: 8,
+    firstName: "Laura",
+    lastName: "Miller",
+    fullName: "Laura Miller",
+    position: "UX Designer",
+    department: "Design",
+    team: "Product Design",
+    salary: 67000,
+    employmentStatus: "Active",
+    hireDate: "2021-04-22",
+    email: "lauramiller@company.com",
+    phoneNumber: "+1345678902",
+    address: {
+      street: "123 Pine Ln",
+      city: "Seattle",
+      state: "WA",
+      zipCode: "98101"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 5,
+      lastReviewDate: "2023-11-05",
+      feedback: "Outstanding design skills, needs to work on client communications."
+    },
+    emergencyContact: {
+      name: "Rachel Miller",
+      relationship: "Sister",
+      phoneNumber: "+1876543210"
+    },
+    payroll: {
+      baseSalary: 67000,
+      bonuses: 2000,
+      deductions: 1500,
+      netSalary: 69000
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off",
+      "Gym Membership"
+    ],
+    rolePermissions: [
+      "Design Interfaces",
+      "Collaborate with Developers",
+      "User Testing"
+    ]
+  },
+  {
+    id: 9,
+    firstName: "Sophia",
+    lastName: "Martinez",
+    fullName: "Sophia Martinez",
+    position: "Business Analyst",
+    department: "Business Development",
+    team: "Strategy",
+    salary: 73000,
+    employmentStatus: "Active",
+    hireDate: "2019-02-10",
+    email: "sophiamartinez@company.com",
+    phoneNumber: "+1456123456",
+    address: {
+      street: "789 Birch Blvd",
+      city: "Dallas",
+      state: "TX",
+      zipCode: "75201"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 5,
+      lastReviewDate: "2023-06-01",
+      feedback: "Excellent analysis skills, strong strategic thinking."
+    },
+    emergencyContact: {
+      name: "Antonio Martinez",
+      relationship: "Father",
+      phoneNumber: "+1445566778"
+    },
+    payroll: {
+      baseSalary: 73000,
+      bonuses: 5000,
+      deductions: 2000,
+      netSalary: 76000
+    },
+    benefits: [
+      "Health Insurance",
+      "401K",
+      "Paid Time Off"
+    ],
+    rolePermissions: [
+      "Create Strategies",
+      "Analyze Data",
+      "Client Meetings"
+    ]
+  },
+  {
+    id: 10,
+    firstName: "James",
+    lastName: "Wilson",
+    fullName: "James Wilson",
+    position: "Customer Support Manager",
+    department: "Customer Support",
+    team: "Help Desk",
+    salary: 58000,
+    employmentStatus: "Active",
+    hireDate: "2021-12-05",
+    email: "jameswilson@company.com",
+    phoneNumber: "+1122334455",
+    address: {
+      street: "234 Oak St",
+      city: "Miami",
+      state: "FL",
+      zipCode: "33101"
+    },
+    completed: false,
+    performanceReview: {
+      rating: 3,
+      lastReviewDate: "2023-10-25",
+      feedback: "Needs to improve customer handling speed."
+    },
+    emergencyContact: {
+      name: "Megan Wilson",
+      relationship: "Wife",
+      phoneNumber: "+1456789012"
+    },
+    payroll: {
+      baseSalary: 58000,
+      bonuses: 1500,
+      deductions: 1000,
+      netSalary: 59000
+    },
+    benefits: [
+      "Health Insurance",
+      "Paid Time Off"
+    ],
+    rolePermissions: [
+      "Manage Support Team",
+      "Oversee Customer Queries",
+      "Escalation Management"
+    ]
+  }
+];
