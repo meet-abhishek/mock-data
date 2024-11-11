@@ -288,26 +288,39 @@
     "salary": 68000,
     "employmentStatus": "Active",
     "hireDate": "2017-03-12",
-    "email": "d
-
-avidjohnson@company.com",
-    "phoneNumber": "+1098765432",
+    "email": "davidjohnson@company.com",
+    "phoneNumber": "+1678901234",
     "address": {
-      "street": "401 Oak Ave",
-      "city": "Seattle",
-      "state": "WA",
-      "zipCode": "98101"
+      "street": "567 Birch Ln",
+      "city": "Dallas",
+      "state": "TX",
+      "zipCode": "75201"
     },
     "completed": false,
     "performanceReview": {
-      "rating": 5,
-      "lastReviewDate": "2023-11-22",
-      "feedback": "Excellent at process optimization."
+      "rating": 3,
+      "lastReviewDate": "2023-10-10",
+      "feedback": "Good problem-solving skills, needs improvement in team coordination."
     },
     "emergencyContact": {
-      "name": "Lucy Johnson",
-      "relationship": "Wife",
-      "phoneNumber": "+1456789011"
+      "name": "Linda Johnson",
+      "relationship": "Mother",
+      "phoneNumber": "+1654321098"
     },
     "payroll": {
-      "base
+      "baseSalary": 68000,
+      "bonuses": 3000,
+      "deductions": 1800,
+      "netSalary": 67000
+    },
+    "benefits": [
+      "Health Insurance",
+      "401K"
+    ],
+    "rolePermissions": [
+      "Oversee Operations",
+      "Coordinate Logistics",
+      "Manage Budgets"
+    ]
+  }
+]
